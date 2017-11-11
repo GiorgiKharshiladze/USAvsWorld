@@ -29,25 +29,55 @@ svg.append("rect")
 
 var g = svg.append("g");
 
-svg
-    .call(zoom); // delete this line to disable free zooming
+svg.call(zoom); // delete this line to disable free zooming
     // .call(zoom.event); // not in d3 v4
+    
 
-d3.json("us.json", function(error, us) {
-  if (error) throw error;
+d3.json("usTopo.json", function(error, us) {
+    
+    if (error) throw error;
 
-  g.selectAll("path")
-      .data(topojson.feature(us, us.objects.states).features)
-    .enter().append("path")
-      .attr("d", path)
-      .attr("class", "feature")
-      .on("click", clicked);
+    var data = topojson.feature(us, us.objects.states).features;
 
-  g.append("path")
-      .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
-      .attr("class", "mesh")
-      .attr("d", path);
+    d3.tsv("stateNames.tsv", function(tsv){ // Added to label states
+        var names = {};
+        tsv.forEach(function(d,i){
+        names[d.id] = d.name;
+        });
+
+    g.selectAll("path")
+        .data(data)
+        .enter().append("path")
+        .attr("d", path)
+        .attr("class", "feature")
+        .on("click", clicked);
+
+    g.append("path")
+        .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
+        .attr("class", "mesh")
+        .attr("d", path);
+
+    g.append("g") // Added to show labels for each state
+        .attr("class", "states-names")
+        .selectAll("text")
+        .data(data)
+        .enter()
+        .append("svg:text")
+        .text(function(d){
+          return names[d.id];
+        })
+        .attr("x", function(d){
+            return path.centroid(d)[0];
+        })
+        .attr("y", function(d){
+            return  path.centroid(d)[1];
+        })
+        .attr("text-anchor","middle")
+        .attr('fill', 'white');
+
+    });
 });
+
 
 function clicked(d) {
   if (active.node() === this) return reset();
