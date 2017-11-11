@@ -1,61 +1,61 @@
-id	code	name
-1	AL	Alabama
-2	AK	Alaska
-4	AZ	Arizona
-5	AR	Arkansas
-6	CA	California
-8	CO	Colorado
-9	CT	Connecticut
-10	DE	Delaware
-11	DC	District of Columbia
-12	FL	Florida
-13	GA	Georgia
-15	HI	Hawaii
-16	ID	Idaho
-17	IL	Illinois
-18	IN	Indiana
-19	IA	Iowa
-20	KS	Kansas
-21	KY	Kentucky
-22	LA	Louisiana
-23	ME	Maine
-24	MD	Maryland
-25	MA	Massachusetts
-26	MI	Michigan
-27	MN	Minnesota
-28	MS	Mississippi
-29	MO	Missouri
-30	MT	Montana
-31	NE	Nebraska
-32	NV	Nevada
-33	NH	New Hampshire
-34	NJ	New Jersey
-35	NM	New Mexico
-36	NY	New York
-37	NC	North Carolina
-38	ND	North Dakota
-39	OH	Ohio
-40	OK	Oklahoma
-41	OR	Oregon
-42	PA	Pennsylvania
-44	RI	Rhode Island
-45	SC	South Carolina
-46	SD	South Dakota
-47	TN	Tennessee
-48	TX	Texas
-49	UT	Utah
-50	VT	Vermont
-51	VA	Virginia
-53	WA	Washington
-54	WV	West Virginia
-55	WI	Wisconsin
-56	WY	Wyoming
-60	AS	America Samoa
-64	FM	Federated States of Micronesia
-66	GU	Guam
-68	MH	Marshall Islands
-69	MP	Northern Mariana Islands
-70	PW	Palau
-72	PR	Puerto Rico
-74	UM	U.S. Minor Outlying Islands
-78	VI	Virgin Islands of the United States
+id	code	name	gdp
+1	AL	Alabama	3.2
+2	AK	Alaska	3.2
+4	AZ	Arizona	3.2
+5	AR	Arkansas	3.2
+6	CA	California	3.2
+8	CO	Colorado	3.2
+9	CT	Connecticut	3.2
+10	DE	Delaware	3.2
+11	DC	District of Columbia	3.2
+12	FL	Florida	3.2
+13	GA	Georgia	3.2
+15	HI	Hawaii	3.2
+16	ID	Idaho	3.2
+17	IL	Illinois	3.2
+18	IN	Indiana	3.2
+19	IA	Iowa	3.2
+20	KS	Kansas	3.2
+21	KY	Kentucky	3.2
+22	LA	Louisiana	3.2
+23	ME	Maine	3.2
+24	MD	Maryland	3.2
+25	MA	Massachusetts	3.2
+26	MI	Michigan	3.2
+27	MN	Minnesota	3.2
+28	MS	Mississippi	3.2
+29	MO	Missouri	3.2
+30	MT	Montana	3.2
+31	NE	Nebraska	3.2
+32	NV	Nevada	3.2
+33	NH	New Hampshire	3.2
+34	NJ	New Jersey	3.2
+35	NM	New Mexico	3.2
+36	NY	New York	3.2
+37	NC	North Carolina	3.2
+38	ND	North Dakota	3.2
+39	OH	Ohio	3.2
+40	OK	Oklahoma	3.2
+41	OR	Oregon	3.2
+42	PA	Pennsylvania	3.2
+44	RI	Rhode Island	3.2
+45	SC	South Carolina	3.2
+46	SD	South Dakota	3.2
+47	TN	Tennessee	3.2
+48	TX	Texas	3.2
+49	UT	Utah	3.2
+50	VT	Vermont	3.2
+51	VA	Virginia	3.2
+53	WA	Washington	3.2
+54	WV	West Virginia	3.2
+55	WI	Wisconsin	3.2
+56	WY	Wyoming	3.2
+60	AS	America Samoa	3.2
+64	FM	Federated States of Micronesia	3.2
+66	GU	Guam	3.2
+68	MH	Marshall Islands	3.2
+69	MP	Northern Mariana Islands	3.2
+70	PW	Palau	3.2
+72	PR	Puerto Rico	3.2
+74	UM	U.S. Minor Outlying Islands	3.2
+78	VI	Virgin Islands of the United States	3.2

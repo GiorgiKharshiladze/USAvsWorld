@@ -1,6 +1,8 @@
 
 var currentDate = new Date();
-var year = currentDate.getFullYear()-3;
+var year = currentDate.getFullYear();
+
+year = 2016;
 
 console.log(year);
 var APIkey = '6647ACFF-BB61-40A2-925C-08953418103E';
@@ -14,7 +16,8 @@ var beaData = $.getJSON(url, function(data) {
     //data is the JSON string
     var myData = JSON.parse(beaData.responseText).BEAAPI.Results.Data;
     // var myData = d3.json(beaData);
-    console.log(myData);
+    
+    // console.log(myData);
     jQuery.each(myData, function(i, val) {
         var Country = val.GeoName.replace("*","");
         console.log(Country, val.DataValue, "Dollars");
