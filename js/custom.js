@@ -16,6 +16,8 @@ var zoom = d3.zoom()
 var path = d3.geoPath() // updated for d3 v4
     .projection(projection);
 
+    console.log(path);
+
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height)
