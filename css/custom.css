@@ -9,7 +9,9 @@ cursor: pointer;
 }
 
 .feature.active {
-fill: orange;
+  background-image: url('us.png');
+  background-position: center;
+  fill-opacity: 0; 
 }
 
 .mesh {

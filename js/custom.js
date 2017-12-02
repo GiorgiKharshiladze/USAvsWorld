@@ -1,9 +1,9 @@
-var width = window.innerWidth,
-    height = window.innerHeight,
+var width = 1400,
+    height = 600,
     active = d3.select(null);
 
 var projection = d3.geoAlbersUsa() // updated for d3 v4
-    .scale(2000)
+    .scale(1000)
     .translate([width / 2, height / 2]);
 
 var zoom = d3.zoom()
@@ -25,6 +25,8 @@ var g = svg.append("g");
  svg.call(zoom); // delete this line to disable free zooming
     // .call(zoom.event); // not in d3 v4
     
+
+  
 
 d3.json("usTopo.json", function(error, us) {
     
@@ -87,9 +89,14 @@ d3.json("usTopo.json", function(error, us) {
 
 
 function clicked(d) {
+
   if (active.node() === this) return reset();
   active.classed("active", false);
   active = d3.select(this).classed("active", true);
+
+
+  var flagURL = "../flags/us.png";
+  $(".feature.active").css("background-image", 'url(us.png)');
 
     // Here we add more details inside the div
     var htmlDetails = "";
@@ -117,6 +124,8 @@ function reset() {
   active = d3.select(null);
 
   $("#details").hide();
+
+  $(".feature").css("fill","#ccc");
 
   svg.transition()
       .duration(750)
