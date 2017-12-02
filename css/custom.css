@@ -30,11 +30,15 @@ stroke-linejoin: round;
 .tooltip_key {
   font-weight: bold;
 }
-  
-.details {
+
+#details {
   position: absolute;
-  background-color: #fff;
-  color: #000;
-  padding: 10px;
-  border: 1px solid;
+  width: 25%;
+  height: 90%;
+  top: 5%;
+  color: #fff;
+  background-color: #000;
+  opacity: 0.3;
+  display: none;
 }
+  

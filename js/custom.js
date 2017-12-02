@@ -9,9 +9,6 @@ var projection = d3.geoAlbersUsa() // updated for d3 v4
 var zoom = d3.zoom()
     .scaleExtent([1, 8])
     .on("zoom", zoomed);
-    // no longer in d3 v4 - zoom initialises with zoomIdentity, so it's already at origin
-    // .translate([0, 0]) 
-    // .scale(1) 
 
 var path = d3.geoPath() // updated for d3 v4
     .projection(projection);
@@ -22,12 +19,6 @@ var svg = d3.select("body").append("svg")
     .attr("height", height)
     .on("click", stopped, true);
 
-// svg.append("rect")
-//     .attr("class", "background")
-//     .attr("width", width)
-//     .attr("height", height)
-//     .attr("fill", "#c1c1c1")
-//     .on("click", reset);
 
 var g = svg.append("g");
 
@@ -63,30 +54,7 @@ d3.json("usTopo.json", function(error, us) {
         .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
         .attr("class", "mesh")
         .attr("d", path);
-
-    g.append("svg:text").on("click", clicked);
-
-    g.on("mouseover", function(){
-        
-        txt // Added to show labels for each state
-        .attr("class", "states-names")
-        .selectAll("text")
-        .data(data)
-        .enter()
-        .append("svg:text")
-        .text(function(d){
-          return names[d.id];
-        })
-        .attr("x", function(d){
-            return path.centroid(d)[0];
-        })
-        .attr("y", function(d){
-            return  path.centroid(d)[1];
-        })
-        .attr("text-anchor","middle")
-        .attr('fill', 'white');
-    });
-        
+    
     });
 });
 
@@ -125,6 +93,12 @@ function clicked(d) {
   active.classed("active", false);
   active = d3.select(this).classed("active", true);
 
+    // Here we add more details inside the div
+    var htmlDetails = "";
+    htmlDetails += "<div>Test</div>";
+    $("#details").html(htmlDetails);
+    $("#details").show();
+
   var bounds = path.bounds(d),
       dx = bounds[1][0] - bounds[0][0],
       dy = bounds[1][1] - bounds[0][1],
@@ -135,35 +109,24 @@ function clicked(d) {
 
     svg.transition()
       .duration(750)
-      // .call(zoom.translate(translate).scale(scale).event); // not in d3 v4
       .call( zoom.transform, d3.zoomIdentity.translate(translate[0],translate[1]).scale(scale) ); // updated for d3 v4
 
-    g.append("svg:text")
-    .text("mystring")
-    .attr("x", function(d){
-        return path.centroid(d)[0];
-    })
-    .attr("y", function(d){
-        return  path.centroid(d)[1];
-    })
-    .attr("text-anchor","middle")
-    .attr('fill', 'white');
-
+    
 }
 
 function reset() {
   active.classed("active", false);
   active = d3.select(null);
 
+  $("#details").hide();
+
   svg.transition()
       .duration(750)
-      // .call( zoom.transform, d3.zoomIdentity.translate(0, 0).scale(1) ); // not in d3 v4
       .call( zoom.transform, d3.zoomIdentity ); // updated for d3 v4
 }
 
 function zoomed() {
   g.style("stroke-width", 1.5 / d3.event.transform.k + "px");
-  // g.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")"); // not in d3 v4
   g.attr("transform", d3.event.transform); // updated for d3 v4
 }
 
