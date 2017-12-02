@@ -18,3 +18,16 @@ stroke: #fff;
 stroke-linecap: round;
 stroke-linejoin: round;
 }
+
+#tooltip-container {
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  border: 1px solid;
+  display: none;
+}
+.tooltip_key {
+  font-weight: bold;
+}
+  

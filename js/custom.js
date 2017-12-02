@@ -7,11 +7,11 @@ var projection = d3.geoAlbersUsa() // updated for d3 v4
     .translate([width / 2, height / 2]);
 
 var zoom = d3.zoom()
+    .scaleExtent([1, 8])
+    .on("zoom", zoomed);
     // no longer in d3 v4 - zoom initialises with zoomIdentity, so it's already at origin
     // .translate([0, 0]) 
     // .scale(1) 
-    .scaleExtent([1, 8])
-    .on("zoom", zoomed);
 
 var path = d3.geoPath() // updated for d3 v4
     .projection(projection);
@@ -42,17 +42,49 @@ d3.json("usTopo.json", function(error, us) {
     var data = topojson.feature(us, us.objects.states).features;
 
     d3.tsv("stateNames.tsv", function(tsv){ // Added to label states
-        var names = {};
-        tsv.forEach(function(d,i){
-        names[d.id]   = d.gdp;
+        names = {};
+        tsv.forEach(function(d){
+        names[d.id]   = d.name;
         });
 
     g.selectAll("path")
         .data(data)
         .enter().append("path")
-        .attr("d", path)
         .attr("class", "feature")
-        .on("click", clicked);
+        .on("click", clicked)
+        .attr("d", path)
+        .on("mousemove", function(d) {
+            var html = "";
+  
+            html += "<div class=\"tooltip_kv\">";
+            html += "<span class=\"tooltip_key\">";
+            html += names[d.id];
+            html += "</span>";
+            html += "</div>";
+            
+            $("#tooltip-container").html(html);
+            $(this).attr("fill-opacity", "0.8");
+            $("#tooltip-container").show();
+            
+            var coordinates = d3.mouse(this);
+            
+            var map_width = $('.feature')[0].getBoundingClientRect().width;
+            
+            if (d3.event.layerX < map_width / 2) {
+              d3.select("#tooltip-container")
+                .style("top", (d3.event.layerY + 15) + "px")
+                .style("left", (d3.event.layerX + 15) + "px");
+            } else {
+              var tooltip_width = $("#tooltip-container").width();
+              d3.select("#tooltip-container")
+                .style("top", (d3.event.layerY + 15) + "px")
+                .style("left", (d3.event.layerX - tooltip_width - 30) + "px");
+            }
+        })
+        .on("mouseout", function() {
+                $(this).attr("fill-opacity", "1.0");
+                $("#tooltip-container").hide();
+            });
 
     g.append("path")
         .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
