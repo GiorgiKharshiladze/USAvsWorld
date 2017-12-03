@@ -9,9 +9,7 @@ cursor: pointer;
 }
 
 .feature.active {
-  background-image: url('us.png');
-  background-position: center;
-  fill-opacity: 0; 
+fill-opacity: 0.8;
 }
 
 .mesh {
@@ -37,7 +35,7 @@ stroke-linejoin: round;
   position: absolute;
   width: 25%;
   height: 90%;
-  top: 5%;
+  top: 7%;
   color: #fff;
   background-color: #000;
   opacity: 0.3;
