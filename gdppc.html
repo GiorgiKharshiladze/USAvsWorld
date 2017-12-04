@@ -196,7 +196,7 @@ function clicked(d) {
   active = d3.select(this).classed("active", true);
 
   // $('.feature.active').css("fill-opacity", "0.8")
-    var countryImage = countryCode[d.id] + ".png"
+    var countryImage = "/project/flags/" + countryCode[d.id] + ".png";
     // Here we add more details inside the div
     var htmlDetails = "";
     htmlDetails += "<div>";
@@ -208,7 +208,7 @@ function clicked(d) {
     " is equivalent to that of " + country[d.id] + "</p>";
     htmlDetails += "</div>";
     htmlDetails += "<div>";
-    htmlDetails += "<center><img src=\"" + countryImage + "\" width=\"90%\" height=\"auto\"></center>";
+    htmlDetails += "<center><img src=\"" + countryImage + "\" width=\"80%\" height=\"auto\"></center>";
     htmlDetails += "</div>";
     htmlDetails += "</div>";
     $("#details").html(htmlDetails);
