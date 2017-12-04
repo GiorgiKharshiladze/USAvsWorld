@@ -1,0 +1,44 @@
+.background {
+fill: none;
+pointer-events: all;
+}
+
+.feature {
+fill: #ccc;
+cursor: pointer;
+}
+
+.feature.active {
+fill-opacity: 0.8;
+}
+
+.mesh {
+fill: none;
+stroke: #fff;
+stroke-linecap: round;
+stroke-linejoin: round;
+}
+
+#tooltip-container {
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  border: 1px solid;
+  display: none;
+}
+.tooltip_key {
+  font-weight: bold;
+}
+
+#details {
+  position: absolute;
+  width: 25%;
+  height: 90%;
+  top: 7%;
+  color: #fff;
+  background-color: #000;
+  opacity: 0.3;
+  display: none;
+}
+  

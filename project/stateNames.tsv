@@ -1,0 +1,61 @@
+id	code	name	gdp
+1	AL	Alabama	42124
+2	AK	Alaska	68356
+4	AZ	Arizona	43709
+5	AR	Arkansas	40388
+6	CA	California	66310
+8	CO	Colorado	58422
+9	CT	Connecticut	73641
+10	DE	Delaware	73931
+11	DC	District of Columbia	186174
+12	FL	Florida	44964
+13	GA	Georgia	50955
+15	HI	Hawaii	58742
+16	ID	Idaho	37970
+17	IL	Illinois	61837
+18	IN	Indiana	51546
+19	IA	Iowa	57028
+20	KS	Kansas	52715
+21	KY	Kentucky	44409
+22	LA	Louisiana	50219
+23	ME	Maine	44518
+24	MD	Maryland	62874
+25	MA	Massachusetts	74564
+26	MI	Michigan	49076
+27	MN	Minnesota	60716
+28	MS	Mississippi	36029
+29	MO	Missouri	49383
+30	MT	Montana	44418
+31	NE	Nebraska	60481
+32	NV	Nevada	50161
+33	NH	New Hampshire	58327
+34	NJ	New Jersey	64970
+35	NM	New Mexico	44832
+36	NY	New York	75360
+37	NC	North Carolina	51041
+38	ND	North Dakota	68723
+39	OH	Ohio	53874
+40	OK	Oklahoma	46625
+41	OR	Oregon	55411
+42	PA	Pennsylvania	56625
+44	RI	Rhode Island	54365
+45	SC	South Carolina	42272
+46	SD	South Dakota	55623
+47	TN	Tennessee	49430
+48	TX	Texas	58028
+49	UT	Utah	51243
+50	VT	Vermont	49780
+51	VA	Virginia	58768
+53	WA	Washington	64454
+54	WV	West Virginia	40071
+55	WI	Wisconsin	53565
+56	WY	Wyoming	64659
+60	AS	America Samoa	3.2
+64	FM	Federated States of Micronesia	3.2
+66	GU	Guam	3.2
+68	MH	Marshall Islands	3.2
+69	MP	Northern Mariana Islands	3.2
+70	PW	Palau	3.2
+72	PR	Puerto Rico	3.2
+74	UM	U.S. Minor Outlying Islands	3.2
+78	VI	Virgin Islands of the United States	3.2

@@ -16,6 +16,12 @@
     <link href="assets/css/app.min.css" rel="stylesheet">
     <link href="assets/css/style.min.css" rel="stylesheet">
 
+
+    <!-- Import Project JS & CSS files -->
+    <link   href="project/css/custom.css" rel="stylesheet">
+    <script src="project/js/d3.v4.min.js"></script>
+    <script src="project/js/topojson.v1.min.js"></script>
+
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
     <link rel="icon" href="assets/img/favicon.png">
@@ -49,7 +55,7 @@
           <li class="menu-category">Comparison</li>
 
           <li class="menu-item active" id="item-home">
-            <a class="menu-link" href="index.html">
+            <a class="menu-link" href="/">
               <span class="icon fa fa-home"></span>
               <span class="title">Home</span>
             </a>
@@ -123,72 +129,24 @@
     <header class="topbar">
       <div class="topbar-left">
         <span class="topbar-btn sidebar-toggler"><i>&#9776;</i></span>
+
+        <a class="topbar-btn d-none d-md-block" href="#" data-provide="fullscreen tooltip" title="" data-original-title="Fullscreen">
+            <i class="material-icons fullscreen-default">fullscreen</i>
+            <i class="material-icons fullscreen-active">fullscreen_exit</i>
+        </a>
+
       </div>
 
       <div class="topbar-right">
         <ul class="topbar-btns">
 
-          <!-- Notifications -->
-          <!-- <li class="dropdown d-none d-md-block">
-            <span class="topbar-btn has-new" data-toggle="dropdown"><i class="ti-bell"></i></span>
-            <div class="dropdown-menu dropdown-menu-right">
-
-              <div class="media-list media-list-hover media-list-divided media-list-xs">
-                <a class="media media-new" href="#">
-                  <span class="avatar bg-success"><i class="ti-user"></i></span>
-                  <div class="media-body">
-                    <p>New user registered</p>
-                    <time datetime="2017-07-14 20:00">Just now</time>
-                  </div>
-                </a>
-
-                <a class="media" href="#">
-                  <span class="avatar bg-info"><i class="ti-shopping-cart"></i></span>
-                  <div class="media-body">
-                    <p>New order received</p>
-                    <time datetime="2017-07-14 20:00">2 min ago</time>
-                  </div>
-                </a>
-
-                <a class="media" href="#">
-                  <span class="avatar bg-warning"><i class="ti-face-sad"></i></span>
-                  <div class="media-body">
-                    <p>Refund request from <b>Ashlyn Culotta</b></p>
-                    <time datetime="2017-07-14 20:00">24 min ago</time>
-                  </div>
-                </a>
-
-                <a class="media" href="#">
-                  <span class="avatar bg-primary"><i class="ti-money"></i></span>
-                  <div class="media-body">
-                    <p>New payment has made through PayPal</p>
-                    <time datetime="2017-07-14 20:00">53 min ago</time>
-                  </div>
-                </a>
-              </div>
-
-              <div class="dropdown-footer">
-                <div class="left">
-                  <a href="#">Read all notifications</a>
-                </div>
-
-                <div class="right">
-                  <a href="#" data-provide="tooltip" title="Mark all as read"><i class="fa fa-circle-o"></i></a>
-                  <a href="#" data-provide="tooltip" title="Update"><i class="fa fa-repeat"></i></a>
-                  <a href="#" data-provide="tooltip" title="Settings"><i class="fa fa-gear"></i></a>
-                </div>
-              </div>
-
-            </div>
-          </li> -->
-          <!-- END Notifications -->
+          <!-- Space for Notifications -->
 
         </ul>
 
       </div>
     </header>
     <!-- END Topbar -->
-
 
     <!-- Main container -->
     <main>
@@ -201,6 +159,7 @@
           <div class="card-body" id="content">
 
           </div>
+          
         </div>
 
 
@@ -208,7 +167,7 @@
 
 
       <!-- Footer -->
-      <footer class="site-footer">
+      <!-- <footer class="site-footer">
         <div class="row">
           <div class="col-md-6">
             <p class="text-center text-md-left">Copyright © 2017 All rights reserved.</p>
@@ -228,7 +187,7 @@
             </ul>
           </div>
         </div>
-      </footer>
+      </footer> -->
       <!-- END Footer -->
 
     </main>
