@@ -29,9 +29,9 @@ d3.json("usTopo.json", function(error, us) {
 
     var data = topojson.feature(us, us.objects.states).features;
 
-    var config = {"color1":"#d3e5ff","color2":"#08306B","stateDataColumn":"state_or_territory","valueDataColumn":"population_estimate_for_july_1_2013_number"}
+    var config = {"color1":"#d3e5ff","color2":"#08306B"}
     // var WIDTH = 800, HEIGHT = 500;
-    var COLOR_COUNTS = 9;
+    var COLOR_COUNTS = 50;
     // var SCALE = 0.7;
     function Interpolate(start, end, steps, count) {
         var s = start,
@@ -99,9 +99,7 @@ d3.json("usTopo.json", function(error, us) {
       colors.push(new Color(r, g, b));
     }
     
-    var quantize = d3.scaleQuantize()
-        .domain([0, 1.0])
-        .range(d3.range(COLOR_COUNTS).map(function(i) { return i }));
+
 
     d3.tsv("stateNames.tsv", function(tsv){ // Added to label states
         names = {};
@@ -111,8 +109,12 @@ d3.json("usTopo.json", function(error, us) {
             gdp[d.id] = d.gdp;
         });
 
-    quantize.domain([d3.min(tsv, function(d){ return gdp[d.id] }),
-        d3.max(tsv, function(d){ return gdp[d.id] })]);
+    var quantize = d3.scaleQuantize()
+    .domain([30000, d3.max(tsv, function(d){ return gdp[d.id] })])
+    .range(d3.range(COLOR_COUNTS).map(function(i) { return i }));
+
+    // quantize.domain([d3.min(tsv, function(d){ return gdp[d.id] }), 
+    //     d3.max(tsv, function(d){ return gdp[d.id] })]);
 
     g1.selectAll("path")
         .data(data)
@@ -120,10 +122,10 @@ d3.json("usTopo.json", function(error, us) {
         .attr("class", "feature")
         .on("click", clicked)
         .style("fill", function(d) {
-            var i = quantize(gdp[d.id]);
-            var color = colors[i].getColors();
-            return "rgb(" + color.r + "," + color.g +
-                "," + color.b + ")";
+                var i = quantize(gdp[d.id]);
+                var color = colors[i].getColors();
+                return "rgb(" + color.r + "," + color.g +
+                    "," + color.b + ")";               
         })      
         .attr("d", path)
         .on("mousemove", label)
