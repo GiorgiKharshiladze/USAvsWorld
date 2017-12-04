@@ -1,20 +1,218 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
-    <title>USA vs World</title>
-    <link rel="stylesheet" href="css/custom.css">
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive admin dashboard and web application ui kit. ">
+    <meta name="keywords" content="blank, starter">
 
-<div style="height:10%;">Text</div>
-<div id="details"></div>
-<div id="tooltip-container"></div>
+    <title>USA &mdash; vs. &mdash; World</title>
 
-<script src="js/d3.v4.min.js"></script> <!-- Inclusion of d3 v4 -->
-<script src="js/topojson.v1.min.js"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/custom.js"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,300i" rel="stylesheet">
 
-</body>
+    <!-- Styles -->
+    <link href="assets/css/core.min.css" rel="stylesheet">
+    <link href="assets/css/app.min.css" rel="stylesheet">
+    <link href="assets/css/style.min.css" rel="stylesheet">
+
+
+    <!-- Import Project JS & CSS files -->
+    <link   href="project/project.css" rel="stylesheet">
+    <script src="project/d3.min.js"></script>
+    <script src="project/topojson.min.js"></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" href="assets/img/favicon.png">
+  </head>
+
+  <body>
+
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="spinner-dots">
+        <span class="dot1"></span>
+        <span class="dot2"></span>
+        <span class="dot3"></span>
+      </div>
+    </div>
+
+
+    <!-- Sidebar -->
+    <aside class="sidebar sidebar-icons-right sidebar-icons-boxed sidebar-expand-lg">
+      <header class="sidebar-header">
+        <!-- <a class="logo-icon" href="#"><img src="assets/img/logo-icon-light.png" alt="logo icon"></a> -->
+        <span class="logo">
+          <a href="#"><img src="assets/img/logo-light.png" alt="logo"></a>
+        </span>
+        <span class="sidebar-toggle-fold"></span>
+      </header>
+
+      <nav class="sidebar-navigation">
+        <ul class="menu">
+
+          <li class="menu-category">Comparison</li>
+
+          <li class="menu-item active" id="item-home">
+            <a class="menu-link" href="index.html">
+              <span class="icon fa fa-home"></span>
+              <span class="title">Home</span>
+            </a>
+          </li>
+
+          <li class="menu-item" id="item-gdppc">
+            <a class="menu-link" href="#" onclick="modify('Gross Domestic Product Per Capita','gdppc')">
+              <span class="icon fa fa-money"></span>
+              <span class="title">GDP Per Capita</span>
+            </a>
+          </li>
+
+          <li class="menu-item" id="item-gini">
+            <a class="menu-link" href="#" onclick="modify('GINI Coefficient','gini')">
+              <span class="icon fa fa-google"></span>
+              <span class="title">GINI Coefficient</span>
+            </a>
+          </li>
+
+          <li class="menu-item" id="item-hdi">
+            <a class="menu-link" href="#" onclick="modify('Human Development Index','hdi')">
+              <span class="icon fa fa-users"></span>
+              <span class="title">HDI</span>
+            </a>
+          </li>
+
+          <li class="menu-item" id="item-about" onclick="modify('About Us','about')">
+            <a class="menu-link" href="#">
+              <span class="icon fa fa-users"></span>
+              <span class="title">About</span>
+            </a>
+          </li>
+
+          <li class="menu-item">
+              <a class="menu-link expand" href="#">
+                <span class="icon fa fa-user"></span>
+                <span class="title">Authors</span>
+                <span class="arrow"></span>
+              </a>
+  
+              <ul class="menu-submenu">
+                <li class="menu-item">
+                  <a class="menu-link" href="https://www.linkedin.com/in/giorgikharshiladze/" target="_blank">
+                    <span class="title">Giorgi Kharshiladze</span>
+                  </a>
+                </li>
+  
+                <li class="menu-item">
+                  <a class="menu-link" href="https://www.linkedin.com/in/minhdvu97/" target="_blank">
+                    <span class="title">Minh Vu</span>
+                  </a>
+                </li>
+  
+                <li class="menu-item">
+                  <a class="menu-link" href="https://www.linkedin.com/in/edita-danielyan-95042b129/" target="_blank">
+                    <span class="title">Edita Danielyan</span>
+                  </a>
+                </li>
+  
+              </ul>
+            </li>
+
+        </ul>
+      </nav>
+
+    </aside>
+    <!-- END Sidebar -->
+
+
+    <!-- Topbar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <span class="topbar-btn sidebar-toggler"><i>&#9776;</i></span>
+
+        <a class="topbar-btn d-none d-md-block" href="#" data-provide="fullscreen tooltip" title="" data-original-title="Fullscreen">
+            <i class="material-icons fullscreen-default">fullscreen</i>
+            <i class="material-icons fullscreen-active">fullscreen_exit</i>
+        </a>
+
+      </div>
+
+      <div class="topbar-right">
+        <ul class="topbar-btns">
+
+          <!-- Space for Notifications -->
+
+        </ul>
+
+      </div>
+    </header>
+    <!-- END Topbar -->
+
+    <!-- Main container -->
+    <main>
+      <div class="main-content">
+
+
+        <div class="card">
+          <h4 class="card-title" id="title">Main</h4>
+
+          <div class="card-body" id="content">
+
+          </div>
+          
+        </div>
+
+
+      </div><!--/.main-content -->
+
+
+      <!-- Footer -->
+      <!-- <footer class="site-footer">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="text-center text-md-left">Copyright © 2017 All rights reserved.</p>
+          </div>
+
+          <div class="col-md-6">
+            <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
+              <li class="nav-item">
+                <a class="nav-link" href="../help/articles.html">Documentation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../help/faq.html">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://themeforest.net/item/theadmin-responsive-bootstrap-4-admin-dashboard-webapp-template/20475359?license=regular&amp;open_purchase_for_item_id=20475359&amp;purchasable=source&amp;ref=thethemeio">Purchase Now</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer> -->
+      <!-- END Footer -->
+
+    </main>
+    <!-- END Main container -->
+
+
+    <script>
+
+    function modify(title, item){
+      
+      document.title = title;
+      $(".menu-item").removeClass("active");
+      $("#title").text(title);
+      $("#item-"+item).addClass("active");
+
+      $("#content").load(item+".html");
+    }
+      
+    </script>
+
+    <!-- Scripts -->
+    <script src="assets/js/core.min.js"></script>
+    <script src="assets/js/app.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+
+  </body>
 </html>
