@@ -31,7 +31,7 @@ d3.json("usTopo.json", function(error, us) {
 
     var config = {"color1":"#d3e5ff","color2":"#08306B"}
     // var WIDTH = 800, HEIGHT = 500;
-    var COLOR_COUNTS = 50;
+    var COLOR_COUNTS = 8;
     // var SCALE = 0.7;
     function Interpolate(start, end, steps, count) {
         var s = start,
@@ -103,10 +103,14 @@ d3.json("usTopo.json", function(error, us) {
 
     d3.tsv("stateNames.tsv", function(tsv){ // Added to label states
         names = {};
-        gdp = {}
+        gdp = {};
+        countryCode = {};
+        country = {};
         tsv.forEach(function(d){
             names[d.id] = d.name;
             gdp[d.id] = d.gdp;
+            countryCode[d.id] = d.countryCode;
+            country[d.id] = d.country;
         });
 
     var quantize = d3.scaleQuantize()
@@ -148,6 +152,9 @@ d3.json("usTopo.json", function(error, us) {
 == HELPER FUNCTIONS
 ==============================================================
 */
+const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
 
 function label(d) {
     var html = "";
@@ -185,11 +192,20 @@ function clicked(d) {
   active = d3.select(this).classed("active", true);
 
   // $('.feature.active').css("fill-opacity", "0.8")
-
+    var countryImage = countryCode[d.id] + ".png"
     // Here we add more details inside the div
     var htmlDetails = "";
-    htmlDetails += "<div>Detail of " ;
-    htmlDetails += names[d.id];
+    htmlDetails += "<div>";
+    htmlDetails += "<div class=\"details_title\">" + names[d.id] + "</div>";
+    htmlDetails += "<div class=\"details_text\">";
+    htmlDetails += "<p> The GDP per capita of " + names[d.id] + " is $" 
+    + numberWithCommas(gdp[d.id]) + "</p>";
+    htmlDetails += "<p> The level of GDP per capita of " + names[d.id] + 
+    " is equivalent to that of " + country[d.id] + "</p>";
+    htmlDetails += "</div>";
+    htmlDetails += "<div>";
+    htmlDetails += "<center><img src=\"" + countryImage + "\" width=\"90%\" height=\"auto\"></center>";
+    htmlDetails += "</div>";
     htmlDetails += "</div>";
     $("#details").html(htmlDetails);
     $("#details").show();

@@ -1,5 +1,5 @@
-id	code	name	gdp
-1	AL	Alabama	42124
+id	code	name	gdp	countryCode	country
+1	AL	Alabama	42124	us	USA
 2	AK	Alaska	68356
 4	AZ	Arizona	43709
 5	AR	Arkansas	40388
