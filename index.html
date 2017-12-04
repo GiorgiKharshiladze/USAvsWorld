@@ -6,7 +6,7 @@
     <meta name="description" content="Responsive admin dashboard and web application ui kit. ">
     <meta name="keywords" content="blank, starter">
 
-    <title>Blank page &mdash; TheAdmin</title>
+    <title>USA &mdash; vs. &mdash; World</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,300i" rel="stylesheet">
@@ -36,9 +36,9 @@
     <!-- Sidebar -->
     <aside class="sidebar sidebar-icons-right sidebar-icons-boxed sidebar-expand-lg">
       <header class="sidebar-header">
-        <a class="logo-icon" href="../index.html"><img src="assets/img/logo-icon-light.png" alt="logo icon"></a>
+        <!-- <a class="logo-icon" href="#"><img src="assets/img/logo-icon-light.png" alt="logo icon"></a> -->
         <span class="logo">
-          <a href="../index.html"><img src="assets/img/logo-light.png" alt="logo"></a>
+          <a href="#"><img src="assets/img/logo-light.png" alt="logo"></a>
         </span>
         <span class="sidebar-toggle-fold"></span>
       </header>
@@ -46,74 +46,71 @@
       <nav class="sidebar-navigation">
         <ul class="menu">
 
-          <li class="menu-category">Category 1</li>
+          <li class="menu-category">Comparison</li>
 
-          <li class="menu-item active">
-            <a class="menu-link" href="../dashboard/general.html">
+          <li class="menu-item active" id="item-home">
+            <a class="menu-link" href="index.html">
               <span class="icon fa fa-home"></span>
-              <span class="title">Dashboard</span>
+              <span class="title">Home</span>
+            </a>
+          </li>
+
+          <li class="menu-item" id="item-gdppc">
+            <a class="menu-link" href="#" onclick="modify('Gross Domestic Product Per Capita','gdppc')">
+              <span class="icon fa fa-money"></span>
+              <span class="title">GDP Per Capita</span>
+            </a>
+          </li>
+
+          <li class="menu-item" id="item-gini">
+            <a class="menu-link" href="#" onclick="modify('GINI Coefficient','gini')">
+              <span class="icon fa fa-google"></span>
+              <span class="title">GINI Coefficient</span>
+            </a>
+          </li>
+
+          <li class="menu-item" id="item-hdi">
+            <a class="menu-link" href="#" onclick="modify('Human Development Index','hdi')">
+              <span class="icon fa fa-users"></span>
+              <span class="title">HDI</span>
+            </a>
+          </li>
+
+          <li class="menu-item" id="item-about" onclick="modify('About Us','about')">
+            <a class="menu-link" href="#">
+              <span class="icon fa fa-users"></span>
+              <span class="title">About</span>
             </a>
           </li>
 
           <li class="menu-item">
-            <a class="menu-link" href="#">
-              <span class="icon fa fa-user"></span>
-              <span class="title">Users</span>
-              <span class="arrow"></span>
-            </a>
-
-            <ul class="menu-submenu">
-              <li class="menu-item">
-                <a class="menu-link" href="#">
-                  <span class="dot"></span>
-                  <span class="title">Moderators</span>
-                </a>
-              </li>
-
-              <li class="menu-item">
-                <a class="menu-link" href="#">
-                  <span class="dot"></span>
-                  <span class="title">Customers</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-
-
-
-          <li class="menu-category">Category 2</li>
-
-
-          <li class="menu-item">
-            <a class="menu-link" href="#">
-              <span class="icon ti-layout"></span>
-              <span class="title">Layout</span>
-              <span class="arrow"></span>
-            </a>
-
-            <ul class="menu-submenu">
-              <li class="menu-item">
-                <a class="menu-link" href="#">
-                  <span class="dot"></span>
-                  <span class="title">Sidebar</span>
-                </a>
-              </li>
-
-              <li class="menu-item">
-                <a class="menu-link" href="#">
-                  <span class="dot"></span>
-                  <span class="title">Header</span>
-                </a>
-              </li>
-
-              <li class="menu-item">
-                <a class="menu-link" href="#">
-                  <span class="dot"></span>
-                  <span class="title">Footer</span>
-                </a>
-              </li>
-            </ul>
-          </li>
+              <a class="menu-link expand" href="#">
+                <span class="icon fa fa-user"></span>
+                <span class="title">Authors</span>
+                <span class="arrow"></span>
+              </a>
+  
+              <ul class="menu-submenu">
+                <li class="menu-item">
+                  <a class="menu-link" href="https://www.linkedin.com/in/giorgikharshiladze/" target="_blank">
+                    <span class="title">Giorgi Kharshiladze</span>
+                  </a>
+                </li>
+  
+                <li class="menu-item">
+                  <a class="menu-link" href="https://www.linkedin.com/in/minhdvu97/" target="_blank">
+                    <span class="title">Minh Vu</span>
+                  </a>
+                </li>
+  
+                <li class="menu-item">
+                  <a class="menu-link" href="https://www.linkedin.com/in/edita-danielyan-95042b129/" target="_blank">
+                    <span class="title">Edita Danielyan</span>
+                  </a>
+                </li>
+  
+              </ul>
+            </li>
 
         </ul>
       </nav>
@@ -132,7 +129,7 @@
         <ul class="topbar-btns">
 
           <!-- Notifications -->
-          <li class="dropdown d-none d-md-block">
+          <!-- <li class="dropdown d-none d-md-block">
             <span class="topbar-btn has-new" data-toggle="dropdown"><i class="ti-bell"></i></span>
             <div class="dropdown-menu dropdown-menu-right">
 
@@ -183,7 +180,7 @@
               </div>
 
             </div>
-          </li>
+          </li> -->
           <!-- END Notifications -->
 
         </ul>
@@ -199,9 +196,9 @@
 
 
         <div class="card">
-          <h4 class="card-title">Card title</h4>
+          <h4 class="card-title" id="title">Main</h4>
 
-          <div class="card-body">
+          <div class="card-body" id="content">
 
           </div>
         </div>
@@ -214,7 +211,7 @@
       <footer class="site-footer">
         <div class="row">
           <div class="col-md-6">
-            <p class="text-center text-md-left">Copyright © 2017 <a href="http://thetheme.io/theadmin">TheAdmin</a>. All rights reserved.</p>
+            <p class="text-center text-md-left">Copyright © 2017 All rights reserved.</p>
           </div>
 
           <div class="col-md-6">
@@ -238,21 +235,25 @@
     <!-- END Main container -->
 
 
+    <script>
 
-    <!-- Global quickview -->
-    <div id="qv-global" class="quickview" data-url="assets/data/quickview-global.html">
-      <div class="spinner-linear">
-        <div class="line"></div>
-      </div>
-    </div>
-    <!-- END Global quickview -->
+    function modify(title, item){
+      
+      document.title = title;
+      $(".menu-item").removeClass("active");
+      $("#title").text(title);
+      $("#item-"+item).addClass("active");
 
-
+      $("#content").load(item+".html");
+    }
+      
+    </script>
 
     <!-- Scripts -->
     <script src="assets/js/core.min.js"></script>
     <script src="assets/js/app.min.js"></script>
     <script src="assets/js/script.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
 
   </body>
 </html>
