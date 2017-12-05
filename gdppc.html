@@ -1,12 +1,6 @@
 <div id="details"></div>
 <div id="tooltip-container"></div>
 
-<!-- <defs>
-    <pattern id="img1" patternUnits="userSpaceOnUse" width="100%" height="100">
-      <image xlink:href="project/flags/us.png" x="0" y="0" width="100" height="100" />
-    </pattern>
-  </defs> -->
-
 <script>
 var width = screen.width,
     height = screen.height,
@@ -162,7 +156,7 @@ d3.json("project/usTopo.json", function(error, us) {
 == HELPER FUNCTIONS
 ==============================================================
 */
-function numberWithCommas (x) {
+function numberwithCommas2 (x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 
