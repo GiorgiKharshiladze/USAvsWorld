@@ -156,7 +156,7 @@ d3.json("project/usTopo.json", function(error, us) {
 == HELPER FUNCTIONS
 ==============================================================
 */
-function numberWithCommas (x) {
+function numberwithCommas2 (x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 
@@ -203,7 +203,7 @@ function clicked(d) {
     htmlDetails += "<div class=\"details_title\">" + names[d.id] + "</div>";
     htmlDetails += "<div class=\"details_text\">";
     htmlDetails += "<p> The GDP per capita of " + names[d.id] + " is $" 
-    + numberWithCommas(gdp[d.id]) + "</p>";
+    + numberwithCommas2(gdp[d.id]) + "</p>";
     htmlDetails += "<p> The level of GDP per capita of " + names[d.id] + 
     " is equivalent to that of " + country[d.id] + "</p>";
     htmlDetails += "</div>";
