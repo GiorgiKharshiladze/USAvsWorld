@@ -113,22 +113,24 @@ d3.json("project/usTopo.json", function(error, us) {
 
     d3.tsv("project/stateNames.tsv", function(tsv){ // Added to label states
         names = {};
-        gdp = {};
+        gdppc = {};
         countryCode = {};
         country = {};
+        rank = {};
         tsv.forEach(function(d){
             names[d.id] = d.name;
-            gdp[d.id] = d.gdp;
+            gdppc[d.id] = d.gdppc;
             countryCode[d.id] = d.countryCode;
             country[d.id] = d.country;
+            rank[d.id] = d.rank;
         });
 
     var quantize = d3.scaleQuantize()
-    .domain([30000, d3.max(tsv, function(d){ return gdp[d.id] })])
+    .domain([30000, d3.max(tsv, function(d){ return gdppc[d.id] })])
     .range(d3.range(COLOR_COUNTS).map(function(i) { return i }));
 
-    // quantize.domain([d3.min(tsv, function(d){ return gdp[d.id] }), 
-    //     d3.max(tsv, function(d){ return gdp[d.id] })]);
+    // quantize.domain([d3.min(tsv, function(d){ return gdppc[d.id] }), 
+    //     d3.max(tsv, function(d){ return gdppc[d.id] })]);
 
     g1.selectAll("path")
         .data(data)
@@ -136,7 +138,7 @@ d3.json("project/usTopo.json", function(error, us) {
         .attr("class", "feature")
         .on("click", clicked)
         .style("fill", function(d) {
-                var i = quantize(gdp[d.id]);
+                var i = quantize(gdppc[d.id]);
                 var color = colors[i].getColors();
                 return "rgb(" + color.r + "," + color.g +
                     "," + color.b + ")";               
@@ -209,9 +211,11 @@ function clicked(d) {
     htmlDetails += "<div class=\"details_title\">" + names[d.id] + "</div>";
     htmlDetails += "<div class=\"details_text\">";
     htmlDetails += "<p> The GDP per capita of " + names[d.id] + " is $" 
-    + numberWithCommas2(gdp[d.id]) + "</p>";
+    + numberWithCommas2(gdppc[d.id]) + "</p>";
     htmlDetails += "<p> The level of GDP per capita of " + names[d.id] + 
     " is equivalent to that of " + country[d.id] + "</p>";
+    htmlDetails += "<p> If " + names[d.id] + " were a separate country its rank would be at number " +
+    rank[d.id] + " in the world GDP Per Capita PPP ranking. </p>";
     htmlDetails += "</div>";
     htmlDetails += "<div>";
     htmlDetails += "<center><img src=\"" + countryImage + "\" width=\"80%\" height=\"auto\"></center>";

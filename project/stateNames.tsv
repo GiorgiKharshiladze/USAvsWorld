@@ -1,61 +1,61 @@
-id	code	name	gdp	countryCode	country
-1	AL	Alabama	42124	ca	Canada
-2	AK	Alaska	68356	no	Norway
-4	AZ	Arizona	43709	hk	Hong Kong
-5	AR	Arkansas	40388	gb	United Kingdom
-6	CA	California	66310	ie	Ireland
-8	CO	Colorado	58422	bh	Qatar
-9	CT	Connecticut	73641	mac	Macau
-10	DE	Delaware	73931	mac	Macau
-11	DC	District of Columbia	186174	lu	Luxembourg
-12	FL	Florida	44964	nl	Netherlands
-13	GA	Georgia	50955	au	Australia
-15	HI	Hawaii	58742	bh	Qatar
-16	ID	Idaho	37970	ae	United Arab Emirates
-17	IL	Illinois	61837	ie	Ireland
-18	IN	Indiana	51546	se	Sweden
-19	IA	Iowa	57028	us	United States
-20	KS	Kansas	52715	sg	Singapore
-21	KY	Kentucky	44409	at	Austria
-22	LA	Louisiana	50219	au	Australia
-23	ME	Maine	44518	at	Austria
-24	MD	Maryland	62874	ie	Ireland
-25	MA	Massachusetts	74564	mac	Macau
-26	MI	Michigan	49076	au	Australia
-27	MN	Minnesota	60716	ie	Ireland
-28	MS	Mississippi	36029	fr	France
-29	MO	Missouri	49383	nl	Netherlands
-30	MT	Montana	44418	nl	Netherlands
-31	NE	Nebraska	60481	is	Iceland
-32	NV	Nevada	50161	se	Sweden
-33	NH	New Hampshire	58327	us	United States
-34	NJ	New Jersey	64970	ie	Ireland
-35	NM	New Mexico	44832	fi	Finland
-36	NY	New York	75360	ch	Switzerland
-37	NC	North Carolina	51041	se	Sweden
-38	ND	North Dakota	68723	no	Norway
-39	OH	Ohio	53874	dk	Denmark
-40	OK	Oklahoma	46625	au	Australia
-41	OR	Oregon	55411	dk	Denmark
-42	PA	Pennsylvania	56625	us	United States
-44	RI	Rhode Island	54365	dk	Denmark
-45	SC	South Carolina	42272	de	Germany
-46	SD	South Dakota	55623	sg	Singapore
-47	TN	Tennessee	49430	au	Australia
-48	TX	Texas	58028	dk	Denmark
-49	UT	Utah	51243	se	Sweden
-50	VT	Vermont	49780	au	Australia
-51	VA	Virginia	58768	is	Iceland
-53	WA	Washington	64454	ie	Ireland
-54	WV	West Virginia	40071	be	Belgium
-55	WI	Wisconsin	53565	dk	Denmark
-56	WY	Wyoming	64659	ie	Ireland
-60	AS	America Samoa	3.2		
-64	FM	Federated States of Micronesia	3.2		
-66	GU	Guam	3.2		
-68	MH	Marshall Islands	3.2		
-69	MP	Northern Mariana Islands	3.2		
-70	PW	Palau	3.2		
-72	PR	Puerto Rico	3.2		
-74	UM	U.S. Minor Outlying Islands	3.2		
-78	VI	Virgin Islands of the United States	3.2		
+id	code	name	gdppc	countryCode	country	rank
+1	AL	Alabama	42124	gb	United Kingdom	21
+2	AK	Alaska	68356	ie	Ireland	7
+4	AZ	Arizona	43709	fi	Finland	21
+5	AR	Arkansas	40388	nz	New Zealand	24
+6	CA	California	66310	ie	Ireland	7
+8	CO	Colorado	58422	hk	Hong Kong	8
+9	CT	Connecticut	73641	ae	United Arab Emirates	5
+10	DE	Delaware	73931	ae	United Arab Emirates	5
+11	DC	District of Columbia	186174	bh	Qatar	1
+12	FL	Florida	44964	be	Belgium	19
+13	GA	Georgia	50955	is	Iceland	11
+15	HI	Hawaii	58742	no	Norway	9
+16	ID	Idaho	37970	il	Israel	26
+17	IL	Illinois	61837	ch	Switzerland	6
+18	IN	Indiana	51546	is	Iceland	11
+19	IA	Iowa	57028	us	United States	10
+20	KS	Kansas	52715	is	Iceland	11
+21	KY	Kentucky	44409	ca	Canada	20
+22	LA	Louisiana	50219	nl	Netherlands	13
+23	ME	Maine	44518	be	Belgium	19
+24	MD	Maryland	62874	ch	Switzerland	6
+25	MA	Massachusetts	74564	bn	Brunei	4
+26	MI	Michigan	49076	se	Sweden	15
+27	MN	Minnesota	60716	no	Norway	9
+28	MS	Mississippi	36029	es	Spain	28
+29	MO	Missouri	49383	dk	Denmark	14
+30	MT	Montana	44418	ca	Canada	20
+31	NE	Nebraska	60481	no	Norway	9
+32	NV	Nevada	50161	at	Austria	13
+33	NH	New Hampshire	58327	hk	Hong Kong	8
+34	NJ	New Jersey	64970	ch	Switzerland	6
+35	NM	New Mexico	44832	be	Belgium	19
+36	NY	New York	75360	bn	Brunei	4
+37	NC	North Carolina	51041	is	Iceland	11
+38	ND	North Dakota	68723	ie	Ireland	7
+39	OH	Ohio	53874	sa	Saudi Arabia	10
+40	OK	Oklahoma	46625	au	Australia	17
+41	OR	Oregon	55411	sa	Saudi Arabia	10
+42	PA	Pennsylvania	56625	us	United States	10
+44	RI	Rhode Island	54365	sa	Saudi Arabia	10
+45	SC	South Carolina	42272	gb	United Kingdom	21
+46	SD	South Dakota	55623	sa	Saudi Arabia	10
+47	TN	Tennessee	49430	dk	Denmark	14
+48	TX	Texas	58028	hk	Hong Kong	8
+49	UT	Utah	51243	is	Iceland	11
+50	VT	Vermont	49780	dk	Denmark	14
+51	VA	Virginia	58768	no	Norway	9
+53	WA	Washington	64454	ie	Ireland	7
+54	WV	West Virginia	40071	nz	New Zealand	24
+55	WI	Wisconsin	53565	sa	Saudi Arabia	10
+56	WY	Wyoming	64659	ch	Switzerland	6
+60	AS	America Samoa	3.2			
+64	FM	Federated States of Micronesia	3.2			
+66	GU	Guam	3.2			
+68	MH	Marshall Islands	3.2			
+69	MP	Northern Mariana Islands	3.2			
+70	PW	Palau	3.2			
+72	PR	Puerto Rico	3.2			
+74	UM	U.S. Minor Outlying Islands	3.2			
+78	VI	Virgin Islands of the United States	3.2			

@@ -1,0 +1,52 @@
+id	code	name	gini	countryCode	country
+1	AL	Alabama	0.472	do	Dominican Republic
+2	AK	Alaska	0.422	ge	Georgia
+4	AZ	Arizona	0.455	uy	Uruguay
+5	AR	Arkansas	0.458	tg	Togo
+6	CA	California	0.471	do	Dominican Republic
+8	CO	Colorado	0.457	tg	Togo
+9	CT	Connecticut	0.486	cd	"Congo, Rep."
+10	DE	Delaware	0.532	br	Brazil
+11	DC	District of Columbia	0.44	el	El Salvador
+12	FL	Florida	0.474	cl	Chile
+13	GA	Georgia	0.468	bo	Bolivia
+15	HI	Hawaii	0.433	ro	Rep. of Chad
+16	ID	Idaho	0.433	ro	Rep. of Chad
+17	IL	Illinois	0.465	bo	Bolivia
+18	IN	Indiana	0.44	ar	Argentina
+19	IA	Iowa	0.427	mk	"Macedonia, FYR"
+20	KS	Kansas	0.445	el	El Salvador
+21	KY	Kentucky	0.466	my	Malaysia
+22	LA	Louisiana	0.475	cl	Chile
+23	ME	Maine	0.437	bj	Benin
+24	MD	Maryland	0.443	ar	Argentina
+25	MA	Massachusetts	0.475	cl	Chile
+26	MI	Michigan	0.451	uy	Uruguay
+27	MN	Minnesota	0.44	el	El Salvador
+28	MS	Mississippi	0.468	do	Dominican Republic
+29	MO	Missouri	0.455	uy	Uruguay
+30	MT	Montana	0.435	zw	Zimbabwe
+31	NE	Nebraska	0.432	zw	Zimbabwe
+32	NV	Nevada	0.448	ar	Argentina
+33	NH	New Hampshire	0.425	il	Israel
+34	NJ	New Jersey	0.464	pe	Peru
+35	NM	New Mexico	0.464	pe	Peru
+36	NY	New York	0.499	ec	Ecuador
+37	NC	North Carolina	0.464	bo	Bolivia
+38	ND	North Dakota	0.433	ro	Rep. of Chad
+39	OH	Ohio	0.452	uy	Uruguay
+40	OK	Oklahoma	0.454	uy	Uruguay
+41	OR	Oregon	0.449	ar	Argentina
+42	PA	Pennsylvania	0.461	mw	Malawi
+44	RI	Rhode Island	0.467	bo	Bolivia
+45	SC	South Carolina	0.461	mw	Malawi
+46	SD	South Dakota	0.442	el	El Salvador
+47	TN	Tennessee	0.468	do	Dominican Republic
+48	TX	Texas	0.469	do	Dominican Republic
+49	UT	Utah	0.419	ir	Iran
+50	VT	Vermont	0.444	ar	Argentina
+51	VA	Virginia	0.459	tg	Togo
+53	WA	Washington	0.441	bj	Benin
+54	WV	West Virginia	0.451	uy	Uruguay
+55	WI	Wisconsin	0.43	ro	Rep. of Chad
+56	WY	Wyoming	0.423	mg	Madagascar
