@@ -18,7 +18,7 @@ var path = d3.geoPath()
     .projection(projection);
 
 var svg = d3.select("#content").append("svg")
-    .attr("width", "auto")
+    .attr("width", "100%")
     .attr("height", height)
     .on("click", stopped, true);
 
