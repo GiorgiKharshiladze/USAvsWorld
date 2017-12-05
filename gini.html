@@ -2,13 +2,13 @@
 <div id="tooltip-container"></div>
 
 <script>
-var width = screen.width*0.8,
-    height = screen.height*0.7,
+var width = screen.width,
+    height = screen.height,
     active = d3.select(null);
 
 var projection = d3.geoAlbersUsa() // updated for d3 v4
     .scale(1000)
-    .translate([width / 2, height / 2]);
+    .translate([width / 2.5, height / 2.5]);
 
 var zoom = d3.zoom()
     .scaleExtent([1, 8])
@@ -18,7 +18,7 @@ var path = d3.geoPath()
     .projection(projection);
 
 var svg = d3.select("#content").append("svg")
-    .attr("width", width)
+    .attr("width", "auto")
     .attr("height", height)
     .on("click", stopped, true);
 

@@ -8,7 +8,7 @@ var width = screen.width,
 
 var projection = d3.geoAlbersUsa() // updated for d3 v4
     .scale(1000)
-    .translate([width / 2.5, height / 2.5]);
+    .translate([width/2.5, height/2.5]);
 
 var zoom = d3.zoom()
     .scaleExtent([1, 8])
