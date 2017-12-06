@@ -116,11 +116,13 @@ d3.json("project/usTopo.json", function(error, us) {
         gini = {};
         countryCode = {};
         country = {};
+        rank = {};
         tsv.forEach(function(d){
             names[d.id] = d.name;
             gini[d.id] = d.gini;
             countryCode[d.id] = d.countryCode;
             country[d.id] = d.country;
+            rank[d.id] = d.rank;
         });
 
     var quantize = d3.scaleQuantize()
@@ -139,7 +141,7 @@ d3.json("project/usTopo.json", function(error, us) {
         .style("fill", function(d) {
             if (d.id < 70) {
                 var i = quantize(gini[d.id]);
-                console.log(d.id);
+                // console.log(d.id);
                 var color = colors[i].getColors();
                 return "rgb(" + color.r + "," + color.g +
                     "," + color.b + ")"; 
@@ -166,9 +168,9 @@ d3.json("project/usTopo.json", function(error, us) {
 == HELPER FUNCTIONS
 ==============================================================
 */
-var numberWithCommas = function (x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-};
+// var numberWithCommas = function (x) {
+//     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+// };
 
 function label(d) {
     var html = "";
@@ -213,9 +215,10 @@ function clicked(d) {
     htmlDetails += "<div class=\"details_title\">" + names[d.id] + "</div>";
     htmlDetails += "<div class=\"details_text\">";
     htmlDetails += "<p> The Gini Coefficient of " + names[d.id] + " is " 
-    + numberWithCommas(gini[d.id]) + "</p>";
+    + gini[d.id] + "</p>";
     htmlDetails += "<p> The Gini Coefficient of " + names[d.id] + 
     " is equivalent to that of " + country[d.id] + "</p>";
+    htmlDetails += "<p> If " + names[d.id] + " were to be a country, it would be ranked " + rank[d.id] + "th in the World ranking of most inequal countries</p>";
     htmlDetails += "</div>";
     htmlDetails += "<div>";
     htmlDetails += "<center><img src=\"" + countryImage + "\" width=\"80%\" height=\"auto\"></center>";

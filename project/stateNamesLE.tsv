@@ -1,0 +1,52 @@
+id	code	name	le	countryCode	country	rank
+1	AL	Alabama	75.4	ee	Estonia	64
+2	AK	Alaska	78.3	cu	Cuba	34
+4	AZ	Arizona	79.6	fi	Finland	28
+5	AR	Arkansas	76.0	mx	Mexico	53
+6	CA	California	80.8	no	Norway	17
+8	CO	Colorado	80.0	gr	Greece	25
+9	CT	Connecticut	80.8	no	Norway	17
+10	DE	Delaware	78.4	lb	Lebanon	37
+11	DC	District of Columbia	76.5	bn	Brunei	45
+12	FL	Florida	79.4	si	Slovenia	29
+13	GA	Georgia	77.2	bh	Qatar	41
+15	HI	Hawaii	81.3	il	Israel	12
+16	ID	Idaho	79.5	fi	Finland	28
+17	IL	Illinois	79.0	bm	Bermuda	31
+18	IN	Indiana	77.6	ci	Chile	39
+19	IA	Iowa	79.7	fi	Finland	28
+20	KS	Kansas	78.7	cr	Costa Rica	35
+21	KY	Kentucky	76.0	mx	Mexico	53
+22	LA	Louisiana	75.7	om	Oman	54
+23	ME	Maine	79.2	cy	Cyprus	30
+24	MD	Maryland	78.8	cu	Cuba	34
+25	MA	Massachusetts	80.5	kr	"Korea, Rep."	23
+26	MI	Michigan	78.2	ci	Chile	39
+27	MN	Minnesota	81.1	mt	Malta	15
+28	MS	Mississippi	75.0	vn	Vietnam	64
+29	MO	Missouri	77.5	bh	Qatar	41
+30	MT	Montana	78.5	lb	Lebanon	37
+31	NE	Nebraska	79.8	de	Germany	27
+32	NV	Nevada	78.1	gu	Guam	40
+33	NH	New Hampshire	80.3	gr	Greece	25
+34	NJ	New Jersey	80.3	gr	Greece	25
+35	NM	New Mexico	78.4	pr	Puerto Rico	38
+36	NY	New York	80.5	kr	"Korea, Rep."	23
+37	NC	North Carolina	77.8	gu	Guam	40
+38	ND	North Dakota	79.5	fi	Finland	28
+39	OH	Ohio	77.8	gu	Guam	40
+40	OK	Oklahoma	75.9	om	Oman	54
+41	OR	Oregon	79.5	fi	Finland	28
+42	PA	Pennsylvania	78.5	lb	Lebanon	37
+44	RI	Rhode Island	79.9	de	Germany	27
+45	SC	South Carolina	77.0	gu	Guam	40
+46	SD	South Dakota	79.5	fi	Finland	28
+47	TN	Tennessee	76.3	bn	Brunei	45
+48	TX	Texas	78.5	cr	Costa Rica	35
+49	UT	Utah	80.2	gr	Greece	25
+50	VT	Vermont	80.5	kr	"Korea, Rep."	23
+51	VA	Virginia	79.0	bm	Bermuda	31
+53	WA	Washington	79.9	il	Israel	12
+54	WV	West Virginia	75.4	ee	Estonia	58
+55	WI	Wisconsin	80.0	gr	Greece	25
+56	WY	Wyoming	78.3	ci	Chile	39
