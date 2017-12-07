@@ -15,6 +15,9 @@
     <link href="assets/css/core.min.css" rel="stylesheet">
     <link href="assets/css/app.min.css" rel="stylesheet">
     <link href="assets/css/style.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    
 
 
     <!-- Import Project JS & CSS files -->
@@ -25,9 +28,10 @@
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
     <link rel="icon" href="assets/img/favicon.png">
-  </head>
 
-  <body>
+  </head>
+  <!-- Run Main Page on Load -->
+  <body onload="modify('Home','main')">
 
     <!-- Preloader -->
     <div class="preloader">
@@ -54,8 +58,8 @@
 
           <li class="menu-category">Comparison</li>
 
-          <li class="menu-item active" id="item-home">
-            <a class="menu-link" href="index.html">
+          <li class="menu-item active" id="item-main">
+            <a class="menu-link" href="#" onclick="modify('Home','main')">
               <span class="icon fa fa-home"></span>
               <span class="title">Home</span>
             </a>
@@ -161,9 +165,11 @@
 
 
         <div class="card">
-          <h4 class="card-title" id="title">Main</h4>
+          <h4 class="card-title" id="title"><!--Default Title: Main--></h4>
 
           <div class="card-body" id="content">
+
+              <!-- Default Content: main.html -->
 
           </div>
           
@@ -204,7 +210,7 @@
     <script>
 
     function modify(title, item){
-      
+
       document.title = title;
       $(".menu-item").removeClass("active");
       $("#title").text(title);
