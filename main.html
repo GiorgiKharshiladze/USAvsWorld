@@ -20,137 +20,334 @@
     }
 </style>
 
-
+<div class="container">
 
     <div class="page-header">
             <h3>Economic comparison of the United States and the Entire World</h3>
     </div>
 
 
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                Hello, Welcome to the Economic Comparison of the United States and the rest of the world!
+            </h3>
+          </div>
+          <div class="panel-body text-justify">
+                
+            <!-- Navbar -->
+            <ul class="nav nav-tabs">
+                    <li class="mynav active" id="gdppc"><a href="#" onclick="changeData('gdppc')">GDP PerCapita</a></li>
+                    <li class="mynav" id="gini"><a href="#" onclick="changeData('gini')">GINI</a></li>
+                    <li class="mynav" id="lexp"><a href="#" onclick="changeData('lexp')">Life Expectancy</a></li>
+            </ul>
 
-    <!-- Navbar -->
-    <ul class="nav nav-tabs">
-            <li class="mynav active" id="gdppc"><a href="#" onclick="changeData('gdppc')">GDP PerCapita</a></li>
-            <li class="mynav" id="gini"><a href="#" onclick="changeData('gini')">GINI</a></li>
-            <li class="mynav" id="lexp"><a href="#" onclick="changeData('lexp')">Life Expectancy</a></li>
-    </ul>
+            <br>
+            <!-- Map -->
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 map">
+                    <div class="row">
+                        <div class="state" id="AK">AK</div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state" id="ME">ME</div>
+                    </div>
+                    <div class="row">
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state" id="VT">VT</div>
+                        <div class="state" id="NH">NH</div>
+                    </div>
+                    <div class="row">
+                        <div class="state" id="WA">WA</div>
+                        <div class="state" id="ID">ID</div>
+                        <div class="state" id="MT">MT</div>
+                        <div class="state" id="ND">ND</div>
+                        <div class="state" id="MN">MN</div>
+                        <div class="state empty"></div>
+                        <div class="state" id="MI">MI</div>
+                        <div class="state empty"></div>
+                        <div class="state" id="NY">NY</div>
+                        <div class="state" id="MA">MA</div>
+                        <div class="state" id="RI">RI</div>
+                    </div>
+                    <div class="row">
+                        <div class="state" id="OR">OR</div>
+                        <div class="state" id="UT">UT</div>
+                        <div class="state" id="WY">WY</div>
+                        <div class="state" id="SD">SD</div>
+                        <div class="state" id="IA">IA</div>
+                        <div class="state" id="WI">WI</div>
+                        <div class="state" id="IN">IN</div>
+                        <div class="state" id="OH">OH</div>
+                        <div class="state" id="PA">PA</div>
+                        <div class="state" id="NJ">NJ</div>
+                        <div class="state" id="CT">CT</div>
+                    </div>
+                    <div class="row">
+                        <div class="state" id="CA">CA</div>
+                        <div class="state" id="NV">NV</div>
+                        <div class="state" id="CO">CO</div>
+                        <div class="state" id="NE">NE</div>
+                        <div class="state" id="MO">MO</div>
+                        <div class="state" id="IL">IL</div>
+                        <div class="state" id="KY">KY</div>
+                        <div class="state" id="WV">WV</div>
+                        <div class="state" id="VA">VA</div>
+                        <div class="state" id="MD">MD</div>
+                        <div class="state" id="DE">DE</div>
+                    </div>
+                    <div class="row">
+                        <div class="state empty"></div>
+                        <div class="state" id="AZ">AZ</div>
+                        <div class="state" id="NM">NM</div>
+                        <div class="state" id="KS">KS</div>
+                        <div class="state" id="AR">AR</div>
+                        <div class="state" id="TN">TN</div>
+                        <div class="state" id="NC">NC</div>
+                        <div class="state" id="SC">SC</div>
+                        <div class="state" id="DC">DC</div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                    </div>
+                    <div class="row">
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state" id="OK">OK</div>
+                        <div class="state" id="LA">LA</div>
+                        <div class="state" id="MS">MS</div>
+                        <div class="state" id="AL">AL</div>
+                        <div class="state" id="GA">GA</div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                    </div>
+                    <div class="row">
+                        <div class="state" id="HI">HI</div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state" id="TX">TX</div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                        <div class="state" id="FL">FL</div>
+                        <div class="state empty"></div>
+                        <div class="state empty"></div>
+                    </div>
+                </div>
+            </div>
 
-    <br>
-    <!-- Map -->
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3 map">
-                <div class="row">
-                    <div class="state" id="AK">AK</div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state" id="ME">ME</div>
-                </div>
-                <div class="row">
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state" id="VT">VT</div>
-                    <div class="state" id="NH">NH</div>
-                </div>
-                <div class="row">
-                    <div class="state" id="WA">WA</div>
-                    <div class="state" id="ID">ID</div>
-                    <div class="state" id="MT">MT</div>
-                    <div class="state" id="ND">ND</div>
-                    <div class="state" id="MN">MN</div>
-                    <div class="state empty"></div>
-                    <div class="state" id="MI">MI</div>
-                    <div class="state empty"></div>
-                    <div class="state" id="NY">NY</div>
-                    <div class="state" id="MA">MA</div>
-                    <div class="state" id="RI">RI</div>
-                </div>
-                <div class="row">
-                    <div class="state" id="OR">OR</div>
-                    <div class="state" id="UT">UT</div>
-                    <div class="state" id="WY">WY</div>
-                    <div class="state" id="SD">SD</div>
-                    <div class="state" id="IA">IA</div>
-                    <div class="state" id="WI">WI</div>
-                    <div class="state" id="IN">IN</div>
-                    <div class="state" id="OH">OH</div>
-                    <div class="state" id="PA">PA</div>
-                    <div class="state" id="NJ">NJ</div>
-                    <div class="state" id="CT">CT</div>
-                </div>
-                <div class="row">
-                    <div class="state" id="CA">CA</div>
-                    <div class="state" id="NV">NV</div>
-                    <div class="state" id="CO">CO</div>
-                    <div class="state" id="NE">NE</div>
-                    <div class="state" id="MO">MO</div>
-                    <div class="state" id="IL">IL</div>
-                    <div class="state" id="KY">KY</div>
-                    <div class="state" id="WV">WV</div>
-                    <div class="state" id="VA">VA</div>
-                    <div class="state" id="MD">MD</div>
-                    <div class="state" id="DE">DE</div>
-                </div>
-                <div class="row">
-                    <div class="state empty"></div>
-                    <div class="state" id="AZ">AZ</div>
-                    <div class="state" id="NM">NM</div>
-                    <div class="state" id="KS">KS</div>
-                    <div class="state" id="AR">AR</div>
-                    <div class="state" id="TN">TN</div>
-                    <div class="state" id="NC">NC</div>
-                    <div class="state" id="SC">SC</div>
-                    <div class="state" id="DC">DC</div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                </div>
-                <div class="row">
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state" id="OK">OK</div>
-                    <div class="state" id="LA">LA</div>
-                    <div class="state" id="MS">MS</div>
-                    <div class="state" id="AL">AL</div>
-                    <div class="state" id="GA">GA</div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                </div>
-                <div class="row">
-                    <div class="state" id="HI">HI</div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state" id="TX">TX</div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                    <div class="state" id="FL">FL</div>
-                    <div class="state empty"></div>
-                    <div class="state empty"></div>
-                </div>
+            <br>
+
+            <div class="col-md-6" style="text-indent:20px;">
+                <p>
+                    This is a project for Economic Development class ECON342 at <b>Earlham College</b>. The idea is that we compare GDP per capita, GINI coefficient and Life Expectancy rates of individual state and all the countries around the world. We are using HTML, Bootstrap, JavaScript, jQuery and d3.JS Framework to build map of the United States and bind it to the official data from WorldBank(<a href="http://worldbank.org">Worldbank.Org</a>) and Bureau of Economic Analysis(<a href="http://bea.gov">Bea.Gov</a>).
+                </p>
+                
+                <p>
+                    The way it works is pretty simple. We created <b>TSV(Tab Separated Values)</b> file in our project directory which contains all the matches of economic data. We have d3.JS United States map built with <b>SVGs(Scalable Vector Graphics)</b> which is linked to the TSV data file. All the state shapes are defined into TopoJson.JS file, which contains geographical information to draw state shapes appropriately.
+                </p>
+
+                <pre>
+                    <code class="language-css">
+.state {
+    width:8%;
+    height: auto;
+    /* line-height: 70px; */
+    background-color: #F2F1EF;
+    /* border: 1px solid #000; */
+    float:left;
+    text-align: center;
+    margin: 1.5px;
+}
+.empty {
+    background: none;
+    border: none;
+    opacity: 0;
+}
+.flag {
+    opacity:0.8;width:90%;height:50%;
+}
+                    </code>
+                </pre>
+                <pre>
+                    <code class="language-javascript">
+$('&lt;img src="#" class="flag">').appendTo(".state");
+
+var datafile = "stateNames.tsv";
+run();
+
+function changeData(name) {
+    if (name=="gdppc") datafile = "stateNames.tsv";
+    else if (name=="gini") datafile = "stateNamesG.tsv";
+    else datafile = "stateNamesLE.tsv";
+    $(".mynav").removeClass("active");
+    $("#"+name).addClass("active");
+    run();
+}
+
+function run(){
+    d3.tsv("project/"+datafile, function(data) {
+        for (i=0;i<51;i++){
+            $("#"+data[i].code+" img").attr("src","project/flags/"+data[i].countryCode+".png");
+
+            // $("#"+data[i].code+" p").text(data[i].country);
+
+            // $("#"+data[i].code).hover($("#"+data[i].code+" img").attr("alt",data[i.country]));
+        }
+    });
+}
+                    </code>
+                </pre>
+            </div>
+            <div class="col-md-6" style="text-indent:20px;">
+                    <p>
+                        Website Design is built from scratch using the latest version of Bootstrap. This is a single-page application which is open-source and available as a GitHub public repository here:
+                        <p><a href="https://github.com/GiorgiKharshiladze/USAvsWorld">https://GitHub.Com/GiorgiKharshiladze/USAvsWorld</a></p>
+                    </p>
+                    <p>
+                        There is a small square-shaped states map below which summarizes our project in a handy, fully scalable small state-matrix with country flags. This is a map simply written from scratch in pure HTML and jQuery. It's html code Snippet is available below and its styling on the left:
+                    </p>
+                    <pre>
+                        <code class="language-markup">
+    &lt;div class="row">
+    &lt;div class="col-md-6 col-md-offset-3 map" style="width:50%;">
+        &lt;div class="row">
+            &lt;div class="state" id="AK">AK&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state" id="ME">ME&lt;/div>
+        &lt;/div>
+        &lt;div class="row">
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state" id="VT">VT&lt;/div>
+            &lt;div class="state" id="NH">NH&lt;/div>
+        &lt;/div>
+        &lt;div class="row">
+            &lt;div class="state" id="WA">WA&lt;/div>
+            &lt;div class="state" id="ID">ID&lt;/div>
+            &lt;div class="state" id="MT">MT&lt;/div>
+            &lt;div class="state" id="ND">ND&lt;/div>
+            &lt;div class="state" id="MN">MN&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state" id="MI">MI&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state" id="NY">NY&lt;/div>
+            &lt;div class="state" id="MA">MA&lt;/div>
+            &lt;div class="state" id="RI">RI&lt;/div>
+        &lt;/div>
+        &lt;div class="row">
+            &lt;div class="state" id="OR">OR&lt;/div>
+            &lt;div class="state" id="UT">UT&lt;/div>
+            &lt;div class="state" id="WY">WY&lt;/div>
+            &lt;div class="state" id="SD">SD&lt;/div>
+            &lt;div class="state" id="IA">IA&lt;/div>
+            &lt;div class="state" id="WI">WI&lt;/div>
+            &lt;div class="state" id="IN">IN&lt;/div>
+            &lt;div class="state" id="OH">OH&lt;/div>
+            &lt;div class="state" id="PA">PA&lt;/div>
+            &lt;div class="state" id="NJ">NJ&lt;/div>
+            &lt;div class="state" id="CT">CT&lt;/div>
+        &lt;/div>
+        &lt;div class="row">
+            &lt;div class="state" id="CA">CA&lt;/div>
+            &lt;div class="state" id="NV">NV&lt;/div>
+            &lt;div class="state" id="CO">CO&lt;/div>
+            &lt;div class="state" id="NE">NE&lt;/div>
+            &lt;div class="state" id="MO">MO&lt;/div>
+            &lt;div class="state" id="IL">IL&lt;/div>
+            &lt;div class="state" id="KY">KY&lt;/div>
+            &lt;div class="state" id="WV">WV&lt;/div>
+            &lt;div class="state" id="VA">VA&lt;/div>
+            &lt;div class="state" id="MD">MD&lt;/div>
+            &lt;div class="state" id="DE">DE&lt;/div>
+        &lt;/div>
+        &lt;div class="row">
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state" id="AZ">AZ&lt;/div>
+            &lt;div class="state" id="NM">NM&lt;/div>
+            &lt;div class="state" id="KS">KS&lt;/div>
+            &lt;div class="state" id="AR">AR&lt;/div>
+            &lt;div class="state" id="TN">TN&lt;/div>
+            &lt;div class="state" id="NC">NC&lt;/div>
+            &lt;div class="state" id="SC">SC&lt;/div>
+            &lt;div class="state" id="DC">DC&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+        &lt;/div>
+        &lt;div class="row">
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state" id="OK">OK&lt;/div>
+            &lt;div class="state" id="LA">LA&lt;/div>
+            &lt;div class="state" id="MS">MS&lt;/div>
+            &lt;div class="state" id="AL">AL&lt;/div>
+            &lt;div class="state" id="GA">GA&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+        &lt;/div>
+        &lt;div class="row">
+            &lt;div class="state" id="HI">HI&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state" id="TX">TX&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state" id="FL">FL&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+            &lt;div class="state empty">&lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                        </code>
+                    </pre>
+            </div>
+          </div>
+    
+
+    
     </div>
 
-
-</di>
+</div>
 
 <!-- jQuery + Javascript -->
 <script>
-    $('<img src="#" class="flag"">').appendTo(".state");
+    $('<img src="#" class="flag">').appendTo(".state");
     
     var datafile = "stateNames.tsv";
     run();
